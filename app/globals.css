@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A0A0F;
+  --background-elevated: #111118;
+  --background-subtle: #1A1A24;
+  --brand-red: #E53E3E;
+  --brand-red-hover: #CC2B2B;
+  --brand-coral: #FF6B6B;
+  --brand-gold: #C49A6C;
+  --brand-maroon: #6B0000;
+  --brand-maroon-deep: #8B0000;
+  --text-primary: #FFFFFF;
+  --text-muted: #9CA3AF;
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(229, 62, 62, 0.3);
+  --border-active: rgba(229, 62, 62, 0.6);
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background-elevated: var(--background-elevated);
+  --color-background-subtle: var(--background-subtle);
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-hover: var(--brand-red-hover);
+  --color-brand-coral: var(--brand-coral);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-maroon: var(--brand-maroon);
+  --color-brand-maroon-deep: var(--brand-maroon-deep);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border-default);
+  --color-border-hover: var(--border-hover);
+  --color-border-active: var(--border-active);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --radius-card: 0.75rem;
+  --radius-pill: 9999px;
+  --width-content: 75rem;
+  --width-prose: 37.5rem;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes sponsor-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.sponsor-scroll-animation {
+  animation: sponsor-scroll 25s linear infinite;
 }
