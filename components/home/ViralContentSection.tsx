@@ -14,6 +14,38 @@ interface ViralContent {
   sort_order: number;
 }
 
+// Hardcoded fallback until Supabase is populated or we add YouTube/social auto-fetch
+// TODO: Replace with automated trending content from YouTube, Instagram, etc.
+const FALLBACK_VIRAL_CONTENT: ViralContent[] = [
+  {
+    id: "fallback-1",
+    title: "OpenClaw in Action",
+    description:
+      "See how builders are using OpenClaw to automate workflows and ship faster.",
+    embed_url: "https://www.youtube.com/watch?v=yIKxXRks4Jo",
+    thumbnail_url: "https://img.youtube.com/vi/yIKxXRks4Jo/maxresdefault.jpg",
+    sort_order: 0,
+  },
+  {
+    id: "fallback-2",
+    title: "What OpenClaw Can Do",
+    description:
+      "Real demos of OpenClaw customizations and agent capabilities.",
+    embed_url: "https://www.youtube.com/watch?v=st534T7-mdE",
+    thumbnail_url: "https://img.youtube.com/vi/st534T7-mdE/maxresdefault.jpg",
+    sort_order: 1,
+  },
+  {
+    id: "fallback-3",
+    title: "OpenClaw Stories from the Community",
+    description:
+      "Builders share their OpenClaw setups and breakthrough moments.",
+    embed_url: "https://www.youtube.com/watch?v=RhLpV6QDBFE",
+    thumbnail_url: "https://img.youtube.com/vi/RhLpV6QDBFE/maxresdefault.jpg",
+    sort_order: 2,
+  },
+];
+
 export function ViralContentSection() {
   const [content, setContent] = useState<ViralContent[]>([]);
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -25,7 +57,8 @@ export function ViralContentSection() {
         .from("viral_content")
         .select("*")
         .order("sort_order", { ascending: true });
-      setContent(data ?? []);
+      // Use Supabase data when available; fallback to hardcoded OpenClaw content
+      setContent((data && data.length > 0) ? data : FALLBACK_VIRAL_CONTENT);
     }
     fetchContent();
   }, []);

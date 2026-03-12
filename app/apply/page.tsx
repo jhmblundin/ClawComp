@@ -10,7 +10,7 @@ export const metadata = {
 export default function ApplyPage() {
   return (
     <main className="min-h-screen pt-24 pb-24">
-      <div className="max-w-[37.5rem] mx-auto px-6">
+      <div className="max-w-150 mx-auto px-6">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary mb-2">
           Apply to ClawComp
         </h1>

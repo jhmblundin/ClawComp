@@ -1,0 +1,2 @@
+{"sessionId":"79a154","location":"ApplicationForm.tsx:handleSendMagicLink:pre","message":"Before signInWithOtp","data":{"hasUrl":true,"hasKey":true,"origin":"http://localhost:3000","redirectTo":"http://localhost:3000/apply"},"timestamp":1773294305809,"hypothesisId":"A"}
+{"sessionId":"79a154","location":"ApplicationForm.tsx:handleSendMagicLink:post","message":"After signInWithOtp","data":{"supabaseError":null},"timestamp":1773294306564,"hypothesisId":"E"}

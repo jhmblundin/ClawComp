@@ -1,27 +1,27 @@
 -- Seed data for ClawComp MVP
 -- Run this after applying migrations
 
--- Viral content (from 6-pager references)
+-- Viral content (OpenClaw YouTube videos)
 INSERT INTO viral_content (title, description, embed_url, thumbnail_url, sort_order) VALUES
 (
-  'OpenClaw Style Content Example',
-  'High-energy shorts showcasing OpenClaw customizations and builder workflows.',
-  'https://www.youtube.com/watch?v=IFeaaGsflKU',
-  'https://img.youtube.com/vi/IFeaaGsflKU/maxresdefault.jpg',
+  'OpenClaw in Action',
+  'See how builders are using OpenClaw to automate workflows and ship faster.',
+  'https://www.youtube.com/watch?v=yIKxXRks4Jo',
+  'https://img.youtube.com/vi/yIKxXRks4Jo/maxresdefault.jpg',
   0
 ),
 (
-  'OpenClaw Saves $4200 on Car Purchase',
-  'AJ Stuyvenberg used OpenClaw to save thousands while at work.',
-  'https://aaronstuyvenberg.com/',
-  NULL,
+  'What OpenClaw Can Do',
+  'Real demos of OpenClaw customizations and agent capabilities.',
+  'https://www.youtube.com/watch?v=st534T7-mdE',
+  'https://img.youtube.com/vi/st534T7-mdE/maxresdefault.jpg',
   1
 ),
 (
-  'OpenClaw Re-opens Insurance Claim and Wins',
-  'Julian Goldie shares how OpenClaw helped win a Lemonade claim.',
-  'https://www.linkedin.com/videos/juliangoldieseo_heres-what-happened-lemonade-declined-activity-7431392940641566720-JBxl/',
-  NULL,
+  'OpenClaw Stories from the Community',
+  'Builders share their OpenClaw setups and breakthrough moments.',
+  'https://www.youtube.com/watch?v=RhLpV6QDBFE',
+  'https://img.youtube.com/vi/RhLpV6QDBFE/maxresdefault.jpg',
   2
 );
 

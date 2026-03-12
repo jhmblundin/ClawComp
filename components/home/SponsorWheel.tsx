@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const SPONSORS = [
-  { name: "Link Ventures", src: "/logos/sponsors/Link_logo_2.png" },
-  { name: "OpenClaw", src: "/logos/sponsors/openclaw_logo.png" },
+  { name: "Link Ventures", src: "/logos/white-bg-removed-Link-logo.png" },
+  { name: "OpenClaw", src: "/logos/openclaw.svg" },
   { name: "Sponsor 1", src: "/logos/sponsors/placeholder-1.svg" },
   { name: "Sponsor 2", src: "/logos/sponsors/placeholder-2.svg" },
   { name: "Sponsor 3", src: "/logos/sponsors/placeholder-3.svg" },

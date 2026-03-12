@@ -131,7 +131,7 @@ export function ApplicationForm() {
 
   async function handleTeamCreated(teamId: string) {
     setSelectedTeamId(teamId);
-    setTeamModalOpen(false);
+    // Keep modal open so user sees invite code; they close via "Continue" button
   }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -248,6 +248,7 @@ export function ApplicationForm() {
   }
 
   return (
+    <>
     <form onSubmit={handleSubmit} className="space-y-8">
       <div className="bg-background-elevated border border-border rounded-[0.75rem] p-6 space-y-4">
         <h2 className="text-xl font-bold text-text-primary">Basic Info</h2>
@@ -515,12 +516,13 @@ export function ApplicationForm() {
         Submit Application
       </button>
 
-      <TeamModal
-        isOpen={teamModalOpen}
-        onClose={() => setTeamModalOpen(false)}
-        creatorEmail={email}
-        onTeamCreated={handleTeamCreated}
-      />
     </form>
+    <TeamModal
+      isOpen={teamModalOpen}
+      onClose={() => setTeamModalOpen(false)}
+      creatorEmail={email}
+      onTeamCreated={handleTeamCreated}
+    />
+    </>
   );
 }

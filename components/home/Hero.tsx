@@ -19,12 +19,57 @@ export function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <span className="text-sm md:text-base font-medium uppercase tracking-[0.15em] text-brand-red mb-4">
-          Link Ventures x OpenClaw
-        </span>
+        <motion.div
+          animate={{ y: [0, -8, 0] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="mb-6"
+        >
+          <Image
+            src="/logos/open-link-comb-logo-no-bg.png"
+            alt="Link Ventures x OpenClaw"
+            width={480}
+            height={168}
+            className="h-[10.5rem] w-auto"
+          />
+        </motion.div>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-text-primary mb-6">
-          OpenClaw Builder Challenge
+          ClawComp
         </h1>
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <Link
+            href="https://www.linkventures.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-opacity hover:opacity-80"
+          >
+            <Image
+              src="/logos/white-bg-removed-Link-logo.png"
+              alt="Link Ventures"
+              width={96}
+              height={48}
+              className="h-12 w-auto"
+            />
+          </Link>
+          <span className="text-text-muted text-xl">×</span>
+          <Link
+            href="https://openclaw.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-opacity hover:opacity-80"
+          >
+            <Image
+              src="/logos/OpenClaw-no-bg.png"
+              alt="OpenClaw"
+              width={120}
+              height={48}
+              className="h-12 w-auto"
+            />
+          </Link>
+        </div>
         <p className="text-base md:text-lg leading-relaxed text-text-muted mb-8 max-w-prose">
           University students compete to build the most revolutionary OpenClaw
           setups. Win Mac Minis, cash prizes, and networking with the Link
@@ -43,23 +88,6 @@ export function Hero() {
           >
             Explore Stories
           </Link>
-        </div>
-        <div className="mt-12 flex items-center gap-4">
-          <Image
-            src="/logos/sponsors/Link_logo_2.png"
-            alt="Link Ventures"
-            width={120}
-            height={40}
-            className="h-8 w-auto opacity-90"
-          />
-          <span className="text-text-muted">×</span>
-          <Image
-            src="/logos/sponsors/openclaw_logo.png"
-            alt="OpenClaw"
-            width={120}
-            height={40}
-            className="h-8 w-auto opacity-90"
-          />
         </div>
       </motion.div>
     </section>
