@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const SPONSORS = [
   { name: "Link Ventures", src: "/logos/white-bg-removed-Link-logo.png" },
-  { name: "OpenClaw", src: "/logos/OpenClaw-no-bg.png" },
-  { name: "Sponsor 1", src: "/logos/sponsors/placeholder-1.svg" },
-  { name: "Sponsor 2", src: "/logos/sponsors/placeholder-2.svg" },
-  { name: "Sponsor 3", src: "/logos/sponsors/placeholder-3.svg" },
+  { name: "Link Ventures", src: "/logos/white-bg-removed-Link-logo.png" },
+  { name: "Link Ventures", src: "/logos/white-bg-removed-Link-logo.png" },
+  { name: "Link Ventures", src: "/logos/white-bg-removed-Link-logo.png" },
+  { name: "Link Ventures", src: "/logos/white-bg-removed-Link-logo.png" },
 ];
 
 export function SponsorWheel() {

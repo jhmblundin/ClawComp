@@ -20,12 +20,19 @@ type Application = {
   created_at: string;
 };
 
+type TeamMember = {
+  user_id: string;
+  email: string;
+  name: string;
+};
+
 type TeamWithApps = {
   id: string;
   name: string;
   invite_code: string;
   creator_email: string;
   max_size: number;
+  team_members: TeamMember[] | null;
   created_at: string;
   applications: Application[];
 };

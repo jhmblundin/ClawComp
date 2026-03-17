@@ -36,7 +36,7 @@ export async function GET(request: Request) {
 
     const { data: teams, error: teamsError } = await adminClient
       .from("teams")
-      .select("id, name, invite_code, creator_email, max_size, created_at")
+      .select("id, name, invite_code, creator_email, max_size, team_members, created_at")
       .order("created_at", { ascending: false });
 
     if (teamsError) {

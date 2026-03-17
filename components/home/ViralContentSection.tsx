@@ -19,7 +19,7 @@ interface ViralContent {
 const FALLBACK_VIRAL_CONTENT: ViralContent[] = [
   {
     id: "fallback-1",
-    title: "OpenClaw in Action",
+    title: "OpenClaw Use Cases That Are Actually INSANE (free templates + review)",
     description:
       "See how builders are using OpenClaw to automate workflows and ship faster.",
     embed_url: "https://www.youtube.com/watch?v=yIKxXRks4Jo",
@@ -28,7 +28,7 @@ const FALLBACK_VIRAL_CONTENT: ViralContent[] = [
   },
   {
     id: "fallback-2",
-    title: "What OpenClaw Can Do",
+    title: "The Ultimate Beginner's Guide to OpenClaw",
     description:
       "Real demos of OpenClaw customizations and agent capabilities.",
     embed_url: "https://www.youtube.com/watch?v=st534T7-mdE",
@@ -37,7 +37,7 @@ const FALLBACK_VIRAL_CONTENT: ViralContent[] = [
   },
   {
     id: "fallback-3",
-    title: "OpenClaw Stories from the Community",
+    title: "OpenClaw is 100x better with this tool (Mission Control)",
     description:
       "Builders share their OpenClaw setups and breakthrough moments.",
     embed_url: "https://www.youtube.com/watch?v=RhLpV6QDBFE",
@@ -51,14 +51,37 @@ export function ViralContentSection() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   useEffect(() => {
+    async function fetchYouTubeTitle(embedUrl: string): Promise<string | null> {
+      try {
+        const match = embedUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
+        if (!match) return null;
+        const res = await fetch(
+          `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${match[1]}&format=json`
+        );
+        if (!res.ok) return null;
+        const json = (await res.json()) as { title?: string };
+        return json.title ?? null;
+      } catch {
+        return null;
+      }
+    }
+
     async function fetchContent() {
       const supabase = createClient();
       const { data } = await supabase
         .from("viral_content")
         .select("*")
         .order("sort_order", { ascending: true });
-      // Use Supabase data when available; fallback to hardcoded OpenClaw content
-      setContent((data && data.length > 0) ? data : FALLBACK_VIRAL_CONTENT);
+      const raw = (data && data.length > 0) ? data : FALLBACK_VIRAL_CONTENT;
+
+      // Fetch real YouTube titles for each video
+      const withTitles = await Promise.all(
+        raw.map(async (item) => {
+          const youtubeTitle = await fetchYouTubeTitle(item.embed_url);
+          return youtubeTitle ? { ...item, title: youtubeTitle } : item;
+        })
+      );
+      setContent(withTitles);
     }
     fetchContent();
   }, []);
