@@ -89,16 +89,9 @@ export async function POST(request: Request) {
     }
 
     const supabase = await createClient();
-    const origin =
-      request.headers.get("origin") ||
-      (process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "http://localhost:3000");
-    const emailRedirectTo = `${origin.replace(/\/$/, "")}/auth/callback`;
 
     const { error } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo },
     });
 
     if (error) {
