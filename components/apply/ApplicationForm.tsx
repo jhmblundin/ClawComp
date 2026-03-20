@@ -132,7 +132,7 @@ export function ApplicationForm() {
     setTeamLookupError("");
     const { data, error } = await supabase
       .from("teams")
-      .select("id, name, invite_code, max_size")
+      .select("id, name, invite_code, max_size, team_members")
       .eq("invite_code", inviteCodeInput.trim().toUpperCase())
       .single();
 
@@ -141,12 +141,8 @@ export function ApplicationForm() {
       return;
     }
 
-    const { count } = await supabase
-      .from("applications")
-      .select("id", { count: "exact", head: true })
-      .eq("team_id", data.id);
-
-    if ((count ?? 0) >= data.max_size) {
+    const memberCount = Array.isArray(data.team_members) ? data.team_members.length : 0;
+    if (memberCount >= data.max_size) {
       setTeamLookupError("This team is full.");
       return;
     }
