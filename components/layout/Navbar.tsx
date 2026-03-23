@@ -9,7 +9,7 @@ export function Navbar() {
       <div className="max-w-content mx-auto px-6 lg:px-16 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center -ml-12 ">
           <Image
-            src="/logos/link-claw-combined-edited-brighter-red.png"
+            src="/logos/Luke-edited-final-logo.png"
             alt="Link Ventures x OpenClaw"
             width={280}
             height={80}

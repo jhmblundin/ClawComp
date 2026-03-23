@@ -399,7 +399,7 @@ export function ApplicationForm() {
             LinkedIn
           </label>
           <input
-            type="url"
+            type="text"
             value={formData.linkedin_url}
             onChange={(e) =>
               setFormData((p) => ({ ...p, linkedin_url: e.target.value }))

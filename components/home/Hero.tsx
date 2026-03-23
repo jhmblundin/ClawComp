@@ -29,7 +29,7 @@ export function Hero() {
           className="mb-6"
         >
           <Image
-            src="/logos/link-claw-combined-edited-brighter-red.png"
+            src="/logos/Luke-edited-final-logo.png"
             alt="Link Ventures x OpenClaw"
             width={480}
             height={168}
