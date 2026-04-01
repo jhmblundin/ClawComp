@@ -57,7 +57,7 @@ export function Hero() {
   const { displayed, started } = useTypewriter(TYPEWRITER_LINES);
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16 pb-40 overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 pt-18 pb-38 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

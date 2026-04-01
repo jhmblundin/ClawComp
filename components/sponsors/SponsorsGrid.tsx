@@ -33,6 +33,15 @@ const SPONSORS: Sponsor[] = [
     description:
       "Link Ventures is a Boston-based venture capital firm with a portfolio spanning AI, cybersecurity, fintech, and deep tech. They don't just write checks — they build ecosystems. Link Studios, their in-house incubator at One Kendall Square in Cambridge, provides founders with office space, mentorship, and direct access to a network of technical operators and industry leaders. ClawComp is the flagship program of Link Studios, designed to identify the next generation of AI builders and fast-track them into the Link ecosystem with Mac Minis, cash prizes, and a fully-funded summit in Boston.",
   },
+  {
+    name: "VoiceRun",
+    logo: "/logos/sponsors/voicerun-logo.png",
+    href: "https://voicerun.ai/",
+    blurb:
+      "Voice-powered AI tools that let you build, command, and ship — all by speaking.",
+    description:
+      "VoiceRun is redefining how developers interact with their tools by bringing natural voice control to the entire development workflow. From dictating code to orchestrating complex CI/CD pipelines with spoken commands, VoiceRun removes friction and keeps builders in flow. As a ClawComp sponsor, VoiceRun is backing the next wave of builders who think faster than they type.",
+  },
 ];
 
 export function SponsorsGrid() {

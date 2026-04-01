@@ -8,9 +8,11 @@ const SPONSORS = [
   { name: "Link Ventures", src: "/logos/white-bg-removed-Link-logo.png", href: "https://www.linkventures.com/", size: "default" as const },
   { name: "Talvy", src: "/logos/sponsors/Talvy-logo.png", href: "https://talvy.com/", size: "large" as const },
   { name: "Blitzy", src: "/logos/sponsors/blitzy-logo.png", href: "https://blitzy.com/", size: "default" as const },
+  { name: "VoiceRun", src: "/logos/sponsors/voicerun-logo.png", href: "https://voicerun.ai/", size: "medium" as const },
   { name: "Link Ventures", src: "/logos/white-bg-removed-Link-logo.png", href: "https://www.linkventures.com/", size: "default" as const },
   { name: "Talvy", src: "/logos/sponsors/Talvy-logo.png", href: "https://talvy.com/", size: "large" as const },
   { name: "Blitzy", src: "/logos/sponsors/blitzy-logo.png", href: "https://blitzy.com/", size: "default" as const },
+  { name: "VoiceRun", src: "/logos/sponsors/voicerun-logo.png", href: "https://voicerun.ai/", size: "medium" as const },
 ];
 
 const AUTO_SCROLL_SPEED = -1;
@@ -151,10 +153,10 @@ export function SponsorWheel() {
               <Image
                 src={sponsor.src}
                 alt={sponsor.name}
-                width={sponsor.size === "large" ? 320 : 128}
-                height={sponsor.size === "large" ? 96 : 64}
+                width={sponsor.size === "large" ? 320 : sponsor.size === "medium" ? 190 : 128}
+                height={sponsor.size === "large" ? 96 : sponsor.size === "medium" ? 56 : 64}
                 className={`object-contain w-auto pointer-events-none ${
-                  sponsor.size === "large" ? "max-h-24" : "max-h-12"
+                  sponsor.size === "large" ? "max-h-24" : sponsor.size === "medium" ? "max-h-14" : "max-h-12"
                 }`}
                 draggable={false}
               />
