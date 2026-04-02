@@ -109,7 +109,7 @@ const founders = [
   },
   {
     name: "Luke Tsiaras",
-    title: "Business, University of Rochester",
+    title: "Business and Computer Science, University of Rochester",
     image: "/founders/luke_tsiaras.png",
     linkedin: "https://www.linkedin.com/in/luke-tsiaras-792418354/",
     imageClassName: "object-cover object-top",
