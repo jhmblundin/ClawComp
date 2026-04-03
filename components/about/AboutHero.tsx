@@ -110,25 +110,29 @@ export function AboutHero() {
           <p className="text-sm md:text-base font-medium uppercase tracking-[0.15em] text-brand-red mb-4">
             About the Program
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter flex items-center justify-center gap-4 md:gap-6">
-            <span>This is</span>
-            <span
-              className="bg-clip-text text-transparent animate-gradient-flow"
-              style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #E53E3E 0%, #FF6B6B 15%, #FFFFFF 25%, #E53E3E 38%, #FF6B6B 52%, #22D3EE 65%, #FFFFFF 75%, #FF6B6B 85%, #E53E3E 100%)",
-                backgroundSize: "300% 100%",
-              }}
-            >
-              ClawComp
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter">
+            <span className="flex flex-col items-center gap-1 md:flex-row md:justify-center md:gap-6">
+              <span className="flex items-center gap-3 md:gap-6">
+                <span>This is</span>
+                <span
+                  className="bg-clip-text text-transparent animate-gradient-flow"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #E53E3E 0%, #FF6B6B 15%, #FFFFFF 25%, #E53E3E 38%, #FF6B6B 52%, #22D3EE 65%, #FFFFFF 75%, #FF6B6B 85%, #E53E3E 100%)",
+                    backgroundSize: "300% 100%",
+                  }}
+                >
+                  ClawComp
+                </span>
+              </span>
+              <Image
+                src="/logos/Luke-edited-final-logo.png"
+                alt="ClawComp"
+                width={280}
+                height={80}
+                className="h-24 md:h-36 lg:h-[11.25rem] w-auto md:-ml-12"
+              />
             </span>
-            <Image
-              src="/logos/Luke-edited-final-logo.png"
-              alt="ClawComp"
-              width={280}
-              height={80}
-              className="h-[6.75rem] md:h-36 lg:h-[11.25rem] w-auto -ml-2 md:-ml-12"
-            />
           </h1>
         </motion.div>
 

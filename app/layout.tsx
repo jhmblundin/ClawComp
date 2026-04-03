@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={sourceSans.variable}>
+    <html lang="en" className={sourceSans.variable} suppressHydrationWarning>
       <body className="min-h-screen bg-background text-text-primary antialiased font-sans">
         <Navbar />
         {children}
