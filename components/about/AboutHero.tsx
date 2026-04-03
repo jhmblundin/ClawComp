@@ -115,7 +115,7 @@ export function AboutHero() {
               <span className="flex items-center gap-3 md:gap-6">
                 <span>This is</span>
                 <span
-                  className="bg-clip-text text-transparent animate-gradient-flow"
+                  className="bg-clip-text text-transparent animate-gradient-flow pr-1"
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #E53E3E 0%, #FF6B6B 15%, #FFFFFF 25%, #E53E3E 38%, #FF6B6B 52%, #22D3EE 65%, #FFFFFF 75%, #FF6B6B 85%, #E53E3E 100%)",
