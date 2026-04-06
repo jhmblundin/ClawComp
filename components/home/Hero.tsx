@@ -133,12 +133,30 @@ export function Hero() {
           {started && displayed}
           <span className="inline-block w-[0.55em] h-[1.1em] bg-text-primary align-middle ml-px animate-[blink_1s_step-end_infinite]" />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center items-stretch gap-4">
+          <a
+            href="https://discord.gg/sBNNXj5V"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/discord relative inline-flex items-center justify-center gap-2 w-[170px] bg-[#1a1a2e] text-white font-medium rounded-lg text-base uppercase tracking-wider overflow-hidden transition-all duration-300 hover:shadow-[0_0_25px_rgba(88,100,241,0.4)]"
+          >
+            <span className="absolute inset-0 bg-[#5864f1] translate-y-full group-hover/discord:translate-y-0 transition-transform duration-300 ease-out" />
+            <Image
+              src="/social-media-logos/discord-logo-white.png"
+              alt="Discord"
+              width={31}
+              height={31}
+              className="relative z-10 w-[31px] h-[31px] object-contain"
+            />
+            <span className="relative z-10"> Discord</span>
+          </a>
           <Link
             href="/apply"
-            className="bg-brand-red hover:bg-brand-red-hover text-white font-medium px-10 py-4.5 rounded-lg transition-colors text-base uppercase tracking-wider"
+            className="group/apply relative inline-flex items-center justify-center w-[170px] bg-brand-red text-white font-medium py-4.5 rounded-lg text-base uppercase tracking-wider overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(229,62,62,0.5)] hover:scale-105"
           >
-            Apply Now
+            <span className="absolute inset-0 opacity-0 group-hover/apply:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.2)_0%,_transparent_70%)]" />
+            <span className="absolute inset-0 bg-brand-red-hover opacity-0 group-hover/apply:opacity-100 transition-opacity duration-300" />
+            <span className="relative z-10">Apply Now</span>
           </Link>
         </div>
       </motion.div>
