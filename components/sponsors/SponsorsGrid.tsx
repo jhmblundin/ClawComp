@@ -36,7 +36,7 @@ const SPONSORS: Sponsor[] = [
   {
     name: "VoiceRun",
     logo: "/logos/sponsors/voicerun-logo.png",
-    href: "https://voicerun.ai/",
+    href: "https://voicerun.com/",
     blurb:
       "Voice-powered AI tools that let you build, command, and ship — all by speaking.",
     description:
