@@ -3,6 +3,8 @@ import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 
 const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
