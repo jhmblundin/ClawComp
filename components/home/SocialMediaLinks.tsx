@@ -23,7 +23,7 @@ const SOCIALS: { name: string; src: string; href: string; sizeClass?: string }[]
   {
     name: "TikTok",
     src: "/social-media-logos/tiktok-logo.png",
-    href: "https://www.tiktok.com/@clawcompllc?_r=1&_t=ZT-95AUfIOfFyH",
+    href: "https://www.tiktok.com/@clawcomp?_r=1&_t=ZT-95JvW0GbBEc",
     sizeClass: "w-14 h-14 md:w-16 md:h-16",
   },
 ];
