@@ -114,7 +114,7 @@ export function SponsorWheel() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full pt-16 lg:pt-24 overflow-hidden">
+    <section ref={sectionRef} className="w-full pt-6 lg:pt-10 overflow-hidden">
       <motion.div
         className="flex flex-col items-center pt-6 pb-2"
         style={{ y: headerY, opacity: headerOpacity }}
@@ -122,7 +122,7 @@ export function SponsorWheel() {
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-text-primary mb-1">
           Program Sponsors
         </h2>
-        <p className="text-text-muted text-sm mb-3">Proudly supported by</p>
+        <p className="text-text-muted text-sm mb-6">Proudly supported by</p>
       </motion.div>
 
       <motion.div
